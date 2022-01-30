@@ -4,19 +4,32 @@ public class Controllable : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
 
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+
     private float move;
     private float spriteWidth;
 
     private void Start()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        spriteWidth = sr.sprite.bounds.size.x;
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteWidth = spriteRenderer.sprite.bounds.size.x;
     }
 
     // Update is called once per frame
     void Update()
     {
         move = Input.GetAxisRaw("Horizontal");
+        if (move != 0f)
+        {
+            animator.SetBool("isRunning", true);
+            spriteRenderer.flipX = move < 0f;
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
     }
 
     private void FixedUpdate()
