@@ -29,7 +29,6 @@ public class Spawner : MonoBehaviour
             Vector3 spawnPoint = GetSpawnPosition(spawnPrefab);
             GameObject spawn = Instantiate(spawnPrefab, spawnPoint, Quaternion.identity);
             spawn.transform.parent = transform;
-            Destroy(spawn, 5f); // TODO Refactor to use object pooling
             yield return new WaitForSeconds(spawnDelay);
         }
     }

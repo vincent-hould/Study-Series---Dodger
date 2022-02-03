@@ -404,9 +404,10 @@ GameObject:
   m_Component:
   - component: {fileID: 533848009}
   - component: {fileID: 533848008}
+  - component: {fileID: 533848010}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -475,6 +476,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &533848010
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533848007}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.37660074}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0.5208334, z: 0, w: 0.5208334}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.9375, y: 1.5625}
+    newSize: {x: 10.416667, y: 1.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.9375, y: 0.8092985}
+  m_EdgeRadius: 0
 --- !u!1 &645603810
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657692589
 GameObject:
@@ -676,10 +703,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 70770551615522084, guid: ac8c46f4e3298fb46a2a71ee9bf94231,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 70770551615522087, guid: ac8c46f4e3298fb46a2a71ee9bf94231,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 70770551615522087, guid: ac8c46f4e3298fb46a2a71ee9bf94231,
         type: 3}
@@ -823,12 +855,12 @@ PrefabInstance:
     - target: {fileID: 1186694491319437769, guid: 8aa642587c153ce4781ee48b7c813794,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1186694491319437769, guid: 8aa642587c153ce4781ee48b7c813794,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1186694491319437769, guid: 8aa642587c153ce4781ee48b7c813794,
         type: 3}

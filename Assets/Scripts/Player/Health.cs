@@ -1,14 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    Animator animator;
+
+    private void Start() {
+        animator = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Enemy") {
             PlayerEvents.RaisePlayerDeath();
-            Destroy(gameObject);
+            animator.SetTrigger("receiveHit");
+            animator.SetBool("dead", true);
         }
     }
 }
