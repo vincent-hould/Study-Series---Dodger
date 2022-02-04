@@ -544,6 +544,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstacleSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 637062620954350444, guid: 9491f75a5758ab74cac6c18a0e06089d,
+        type: 3}
+      propertyPath: isEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 637062620954350445, guid: 9491f75a5758ab74cac6c18a0e06089d,
         type: 3}
       propertyPath: m_RootOrder
@@ -701,11 +706,6 @@ PrefabInstance:
     - target: {fileID: 70770551615522084, guid: ac8c46f4e3298fb46a2a71ee9bf94231,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 70770551615522084, guid: ac8c46f4e3298fb46a2a71ee9bf94231,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 70770551615522087, guid: ac8c46f4e3298fb46a2a71ee9bf94231,
